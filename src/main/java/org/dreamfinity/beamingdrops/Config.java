@@ -14,6 +14,8 @@ public class Config {
     public static boolean useFloatingBeam = true;
     public static double beamDiameter = 0.25;
     public static double beamHeight = 1.5;
+    public static String[]  itemBlackList;
+    public static boolean isWhitelist = false;
 
     public static void load(FMLPreInitializationEvent event) {
         config = new Configuration(new File(event.getModConfigurationDirectory(), "BeamingDrops.cfg"), true);
@@ -24,6 +26,8 @@ public class Config {
         useFloatingBeam = config.getBoolean("useFloatingBeam", COMMON, true,  "Slightly float beam over time");
         beamDiameter = config.getFloat("beamDiameter", COMMON, 0.25f, 0.05f, 3.0f, "Beam diameter");
         beamHeight = config.getFloat("beamHeight", COMMON, 4.0f, 0.5f, 32.0f, "Beam height (in blocks)");
+        itemBlackList = config.getStringList("itemBlackList", COMMON, new String[] {}, "Items not to render beam for");
+        isWhitelist = config.getBoolean("isWhitelist", COMMON, false, "If the beam blacklist should be used as a whitelist instead");
         config.save();
     }
 

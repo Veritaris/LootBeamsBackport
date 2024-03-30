@@ -42,7 +42,7 @@ public class BeamRenderer {
         int age = entityItem.age;
         ItemStack itemStack = entityItem.getEntityItem();
 
-        if (world == null || itemStack == null || !Config.needRenderBeam) {
+        if (world == null || itemStack == null || !Config.needRenderBeam || (Config.isWhitelist ^ ItemHelper.isStackInArray(itemStack, Config.itemBlackList))) {
             return;
         }
 

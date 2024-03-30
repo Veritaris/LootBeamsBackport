@@ -41,3 +41,7 @@ If something is missing - pls contact with me via
 [VK](https://vk.me/veritaris),
 [Telegram](tg://resolve?domain=Veritaris) or
 email (georgiiimeshkenov@gmail.com)
+
+#### CHANGES/FIXES
+
+Fix https://github.com/Dreamfinity/LootBeamsBackport/issues/1
