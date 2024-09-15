@@ -5,3 +5,5 @@
 /raw/
 /run/
 *.swp
+/.idea/
+/.DS_Store/
